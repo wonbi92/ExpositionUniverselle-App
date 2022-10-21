@@ -4,7 +4,7 @@
 
 ## 📖 목차
 1. [팀 소개](#-팀-소개)
-2. [GroundRule](#-GroundRule)
+2. [GroundRule](#-ground-rule)
 3. [Code Convention](#-code-convention)
 4. [기능 소개](#-기능-소개)
 5. [Diagram](#-Diagram)
