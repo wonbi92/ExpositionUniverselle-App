@@ -5,8 +5,8 @@
 ## 📖 목차
 1. [팀 소개](#-팀-소개)
 2. [GroundRule](#-ground-rule)
-3. [Code Convention](#-✏️-code-convention)
-4. [기능 소개](#-⚒️-기능-소개)
+3. [Code Convention](#--code-convention)
+4. [기능 소개](#-기능-소개)
 5. [Diagram](#-Diagram)
 6. [폴더 구조](#-폴더-구조)
 7. [타임라인](#-타임라인)
@@ -25,11 +25,11 @@
 
 [Ground Rule 바로가기](https://github.com/wonbi92/ios-exposition-universelle/wiki/1.-Ground-Rule)
 
-## ✏️ Code Convention
+## 📔 Code Convention
 
 [Code Convention 바로가기](https://github.com/wonbi92/ios-exposition-universelle/wiki/2.-Expo-Project-Code-convention)
 
-## ⚒️ 기능 소개
+## 🛠 기능 소개
 |**만국박람회 메인 화면**|**한국의 출품작 목록**|**출품작 상세 페이지**|
  |:---:|:---:|:---:|
 |<img width = 220, src = "https://i.imgur.com/ecg4zXF.gif">|<img width = 220, src = "https://i.imgur.com/Y7VkzGK.gif">|<img width = 220, src = "https://i.imgur.com/B77H29Z.gif">|
