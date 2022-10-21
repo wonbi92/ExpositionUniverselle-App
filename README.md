@@ -25,7 +25,7 @@
 
 [Ground Rule 바로가기](https://github.com/wonbi92/ios-exposition-universelle/wiki/1.-Ground-Rule)
 
-## 📔 Code Convention
+## 🖋 Code Convention
 
 [Code Convention 바로가기](https://github.com/wonbi92/ios-exposition-universelle/wiki/2.-Expo-Project-Code-convention)
 
