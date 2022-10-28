@@ -213,7 +213,7 @@ Expo1900
 </div>
 </details>
 
-## 🏃🏻 기술적 도전
+## [🏃🏻 기술적 도전](https://github.com/wonbi92/ios-exposition-universelle/wiki/4.-Challenge)
 ### ⚙️ JSON Decoding 
 
 <details>
@@ -366,7 +366,7 @@ private var entry: Entry?
 
 
 
-## 🚀 트러블 슈팅
+## [🚀 트러블 슈팅](https://github.com/wonbi92/ios-exposition-universelle/wiki/5.-Troubleshooting)
 ### 📌 TextView Scrolling
 <details>
 <summary>Details</summary>
