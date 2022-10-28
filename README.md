@@ -213,7 +213,7 @@ Expo1900
 </div>
 </details>
 
-## [🏃🏻 기술적 도전](https://github.com/wonbi92/ios-exposition-universelle/wiki/4.-Challenge)
+## 🏃🏻 기술적 도전
 ### ⚙️ JSON Decoding 
 
 <details>
@@ -317,7 +317,56 @@ titleLabel.adjustsFontForContentSizeCategory = true
 </details>
 
 
-## [🚀 트러블 슈팅](https://github.com/wonbi92/ios-exposition-universelle/wiki/5.-Troubleshooting)
+
+### ⚙️ instantiateViewController(identifier:creator:)
+<details>
+<summary>Details</summary>
+<div markdown="1">
+    
+```swift
+// 셀을 터치하면 새로운 뷰를 push합니다.
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+        
+    guard let detailViewController = storyboard?.instantiateViewController(
+        identifier: "DetailViewController",
+        creator: { coder in
+            return DetailViewController(entry: self.entries[indexPath.row], coder: coder)
+        }) else { return }
+        
+    navigationController?.pushViewController(detailViewController, animated: true)
+    }
+
+// 불러올 뷰 컨트롤러입니다.
+final class DetailViewController: UIViewController {
+    private let entry: Entry
+    
+    init?(entry: Entry, coder: NSCoder) {
+        self.entry = entry
+
+        super.init(coder: coder)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+```
+- 기존 iOS 13.0이전에서는 외부에서 값을 주입시키기 위해 미리 이 값이 초기화가 되어 있어야 했습니다.
+```swift
+private var entry: Entry?
+```
+- 따라서, 다음과 같이 변수로 선언해야 했으며, 상황에 따라서는 옵셔널을 사용해야만 했습니다.
+- 하지만, iOS 13.0 이후로는 `UIStoryboard`의 새로운 메서드인 `instantiateViewController(identifier:creator:)`를 활용할 수 있게 되었습니다.
+- 이 메서드를 통해 스토리보드로 만든 뷰 컨트롤러의 커스텀 이니셜라이저를 불러올 수 있게 되었습니다.
+- 주의할 점은, 커스텀 이니셜라이저를 구현함으로써 뷰 컨트롤러의 Required Initializer에서 `fatalError()`와 같은 메서드를 통해 사용해선 안된다는 것을 명시적으로 보여주어야 합니다. </br></br>
+- 💡 이번 프로젝트에서는 뷰 컨트롤러 사이의 데이터 전달할 때, 전달받는 데이터를 초기화 단계에서 주입시켜 줌으로써, 변수가 아닌 상수로 값을 사용하게 하였고, 더불어 옵셔널을 사용하지 않아, 옵셔널 바인딩을 하지 않고 데이터를 활용하게 하여 코드의 가독성도 높이는 방법으로 사용하였습니다.
+</div>
+</details>
+
+
+
+## 🚀 트러블 슈팅
 ### 📌 TextView Scrolling
 <details>
 <summary>Details</summary>
@@ -462,9 +511,10 @@ override func viewWillDisappear(_ animated: Bool) {
 </details>    
  
 ### 📌 textView에서 lineBreak 적용    
+
 <details>
-<summary>Details</summary>
-<div markdown="1">
+<summary>details</summary>
+<div markdown="1">  
 
 **문제 👻**
 > textView의 lineBreak 설정이 한글 지원을 완벽하게 하지 않음 
@@ -498,9 +548,9 @@ extension String {
 }
 ```
 - `NSAttributedString`는 `String`에 텍스트의 속성을 저장하여 사용할 수 있는 구조체입니다.
-- 이 구조체를 활용하여 iOS 14버전 부터 사용 가능한 한글 줄바꿈 속성(`.hangulWordPriority`)을 적용하여 textView에 보여지도록 구현해 보았습니다.
- 
-</div>
+- 이 구조체를 활용하여 iOS 14버전 부터 사용 가능한 한글 줄바꿈 속성(`.hangulWordPriority`)을 적용하여 textView에 보여지도록 구현해 보았습니다.    
+
+ </div>
 </details>
 
 
