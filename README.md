@@ -213,7 +213,7 @@ Expo1900
 </div>
 </details>
 
-## 🏃🏻 기술적 도전
+## [🏃🏻 기술적 도전](https://github.com/wonbi92/ios-exposition-universelle/wiki/4.-Challenge)
 ### ⚙️ JSON Decoding 
 
 <details>
@@ -317,7 +317,7 @@ titleLabel.adjustsFontForContentSizeCategory = true
 </details>
 
 
-## 🚀 트러블 슈팅
+## [🚀 트러블 슈팅](https://github.com/wonbi92/ios-exposition-universelle/wiki/5.-Troubleshooting)
 ### 📌 TextView Scrolling
 <details>
 <summary>Details</summary>
@@ -463,9 +463,8 @@ override func viewWillDisappear(_ animated: Bool) {
  
 ### 📌 textView에서 lineBreak 적용    
 <details>
-
-<summary> details </summary>
-<div markdown="1">  
+<summary>Details</summary>
+<div markdown="1">
 
 **문제 👻**
 > textView의 lineBreak 설정이 한글 지원을 완벽하게 하지 않음 
@@ -500,8 +499,9 @@ extension String {
 ```
 - `NSAttributedString`는 `String`에 텍스트의 속성을 저장하여 사용할 수 있는 구조체입니다.
 - 이 구조체를 활용하여 iOS 14버전 부터 사용 가능한 한글 줄바꿈 속성(`.hangulWordPriority`)을 적용하여 textView에 보여지도록 구현해 보았습니다.
+ 
 </div>
-</detail>
+</details>
 
 
 ## 📝 일일 스크럼
